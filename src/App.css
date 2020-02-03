@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+header {
+  min-height: 400px;
+  background-color: rgb(55, 150, 194);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header .row {
+  padding-top: 150px;
+}
+.profile-section {
+  margin-top: 20px;
+}
+.profile-section .card-title {
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-btn {
+  margin-top: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cancel-btn {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.repos-card {
+  padding: 15px;
+}
+
+.repos-card .repo {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.divider {
+  margin-top: 5px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+}
+
+.stock-values {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.stock-values .stock {
+  text-align: center;
   color: white;
+  padding: 12px;
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.stock-values .stock .value {
+  font-size: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stock-values .followers {
+  background-color: rgb(38, 152, 197);
+}
+
+.stock-values .following {
+  background-color: rgb(13, 126, 120);
+}
+
+.card .divider {
+  margin: 20px auto;
 }
