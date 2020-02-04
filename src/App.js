@@ -6,9 +6,11 @@ import ProfileSection from './components/ProfileSection';
 const gitUrl = 'https://api.github.com/users/';
 
 function App() {
-  const [store, setStore] = useState({
-    profile: { login: 'Rajesh-Manikandan' }
-  });
+  const [store, setStore] = useState();
+
+  useEffect(() => {
+    searchProfile('Rajesh-Manikandan');
+  }, []);
 
   const searchProfile = searchText => {
     if (searchText) {
@@ -24,7 +26,7 @@ function App() {
               .then(res => res.json())
               .then(repos => {
                 setStore({
-                  ...store,
+                  searchText,
                   repos,
                   profile: {
                     login: profile.login,
@@ -47,7 +49,7 @@ function App() {
   return (
     <div className='App'>
       <Header searchProfile={searchProfile} />
-      {store.profile && store.repos ? (
+      {store?.profile && store?.repos ? (
         <ProfileSection store={store} />
       ) : (
         <p className='center'>Search profile to see the data...</p>

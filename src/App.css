@@ -68,3 +68,15 @@ header .row {
 .card .divider {
   margin: 20px auto;
 }
+
+.repo-name {
+  font-size: 18px;
+  font-weight: 450;
+  cursor: pointer;
+}
+
+.repo-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -7,8 +7,10 @@ const Repo = ({ repo }) => {
       <div className='repo'>
         <div className='flex-block'>
           <a
-            href='https://github.com/octocat/boysenberry-repo-1'
+            href={repo.html_url}
             className='repo-name black-text'
+            target='_blank'
+            rel='noopener noreferrer'
           >
             {repo.name}
           </a>
@@ -104,7 +106,15 @@ const ProfileSection = ({ store }) => {
           </div>
           <div className='col s12 m7'>
             <h5>Repos</h5>
-            <div className='div right'>{repos.length} Repos</div>
+            {/* <div className='div repo-nav'>
+              <button className='btn btn-small grey lighten-2  black-text'>
+                <i className='material-icons left'>chevron_left</i> Prev
+              </button>
+              <span>1-8/{repos.length} Repos</span>
+              <button className='btn btn-small grey lighten-2 black-text '>
+                <i className='material-icons right'>chevron_right</i> Next
+              </button>
+            </div> */}
             <div className='row'>
               <div className='col s12'>
                 <div className='card repos-card'>
